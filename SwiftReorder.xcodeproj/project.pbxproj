@@ -3,109 +3,129 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66DF25141D8080A000C19289 /* ReorderController+AutoScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF25101D8080A000C19289 /* ReorderController+AutoScroll.swift */; };
-		66DF25151D8080A000C19289 /* ReorderController+DestinationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF25111D8080A000C19289 /* ReorderController+DestinationRow.swift */; };
-		66DF25161D8080A000C19289 /* ReorderController+GestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF25121D8080A000C19289 /* ReorderController+GestureRecognizer.swift */; };
-		66DF25171D8080A000C19289 /* ReorderController+SnapshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DF25131D8080A000C19289 /* ReorderController+SnapshotView.swift */; };
-		66FC50F11D5EE49D00CFCCCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FC50E81D5EE49D00CFCCCE /* AppDelegate.swift */; };
-		66FC50F21D5EE49D00CFCCCE /* BasicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FC50E91D5EE49D00CFCCCE /* BasicViewController.swift */; };
-		66FC50F41D5EE49D00CFCCCE /* EffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FC50EB1D5EE49D00CFCCCE /* EffectsViewController.swift */; };
-		66FC50F51D5EE49D00CFCCCE /* GroupedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FC50EC1D5EE49D00CFCCCE /* GroupedViewController.swift */; };
-		66FC50F71D5EE49D00CFCCCE /* LongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FC50EE1D5EE49D00CFCCCE /* LongListViewController.swift */; };
-		66FC50F81D5EE49D00CFCCCE /* NonMovableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FC50EF1D5EE49D00CFCCCE /* NonMovableViewController.swift */; };
-		66FC50F91D5EE49D00CFCCCE /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FC50F01D5EE49D00CFCCCE /* RootViewController.swift */; };
-		66FC50FB1D5EE4CA00CFCCCE /* UITableView+Reorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FC50FA1D5EE4CA00CFCCCE /* UITableView+Reorder.swift */; };
-		66FC50FD1D5EE4D600CFCCCE /* ReorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FC50FC1D5EE4D600CFCCCE /* ReorderController.swift */; };
+		41FDCFFE209635BC0040E6F6 /* SwiftReorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FDCFF4209635BC0040E6F6 /* SwiftReorder.framework */; };
+		41FDD003209635BC0040E6F6 /* SwiftReorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FDD002209635BC0040E6F6 /* SwiftReorderTests.swift */; };
+		41FDD005209635BC0040E6F6 /* SwiftReorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 41FDCFF7209635BC0040E6F6 /* SwiftReorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41FDD014209637D00040E6F6 /* UITableView+Reorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FDD00E209637D00040E6F6 /* UITableView+Reorder.swift */; };
+		41FDD015209637D00040E6F6 /* ReorderController+SnapshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FDD00F209637D00040E6F6 /* ReorderController+SnapshotView.swift */; };
+		41FDD016209637D00040E6F6 /* ReorderController+AutoScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FDD010209637D00040E6F6 /* ReorderController+AutoScroll.swift */; };
+		41FDD017209637D00040E6F6 /* ReorderController+GestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FDD011209637D00040E6F6 /* ReorderController+GestureRecognizer.swift */; };
+		41FDD018209637D00040E6F6 /* ReorderController+DestinationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FDD012209637D00040E6F6 /* ReorderController+DestinationRow.swift */; };
+		41FDD019209637D00040E6F6 /* ReorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FDD013209637D00040E6F6 /* ReorderController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		41FDCFFF209635BC0040E6F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41FDCFEB209635BC0040E6F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41FDCFF3209635BC0040E6F6;
+			remoteInfo = SwiftReorder;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		660256931CE6A5170029CB5F /* SwiftReorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftReorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		66DF25101D8080A000C19289 /* ReorderController+AutoScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReorderController+AutoScroll.swift"; path = "Source/ReorderController+AutoScroll.swift"; sourceTree = "<group>"; };
-		66DF25111D8080A000C19289 /* ReorderController+DestinationRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReorderController+DestinationRow.swift"; path = "Source/ReorderController+DestinationRow.swift"; sourceTree = "<group>"; };
-		66DF25121D8080A000C19289 /* ReorderController+GestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReorderController+GestureRecognizer.swift"; path = "Source/ReorderController+GestureRecognizer.swift"; sourceTree = "<group>"; };
-		66DF25131D8080A000C19289 /* ReorderController+SnapshotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ReorderController+SnapshotView.swift"; path = "Source/ReorderController+SnapshotView.swift"; sourceTree = "<group>"; };
-		66FC50E81D5EE49D00CFCCCE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Example/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
-		66FC50E91D5EE49D00CFCCCE /* BasicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicViewController.swift; path = Example/BasicViewController.swift; sourceTree = SOURCE_ROOT; };
-		66FC50EB1D5EE49D00CFCCCE /* EffectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EffectsViewController.swift; path = Example/EffectsViewController.swift; sourceTree = SOURCE_ROOT; };
-		66FC50EC1D5EE49D00CFCCCE /* GroupedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupedViewController.swift; path = Example/GroupedViewController.swift; sourceTree = SOURCE_ROOT; };
-		66FC50ED1D5EE49D00CFCCCE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Example/Info.plist; sourceTree = SOURCE_ROOT; };
-		66FC50EE1D5EE49D00CFCCCE /* LongListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LongListViewController.swift; path = Example/LongListViewController.swift; sourceTree = SOURCE_ROOT; };
-		66FC50EF1D5EE49D00CFCCCE /* NonMovableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NonMovableViewController.swift; path = Example/NonMovableViewController.swift; sourceTree = SOURCE_ROOT; };
-		66FC50F01D5EE49D00CFCCCE /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewController.swift; path = Example/RootViewController.swift; sourceTree = SOURCE_ROOT; };
-		66FC50FA1D5EE4CA00CFCCCE /* UITableView+Reorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Reorder.swift"; path = "Source/UITableView+Reorder.swift"; sourceTree = "<group>"; };
-		66FC50FC1D5EE4D600CFCCCE /* ReorderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReorderController.swift; path = Source/ReorderController.swift; sourceTree = "<group>"; };
+		41FDCFF4209635BC0040E6F6 /* SwiftReorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftReorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41FDCFF7209635BC0040E6F6 /* SwiftReorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftReorder.h; sourceTree = "<group>"; };
+		41FDCFF8209635BC0040E6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41FDCFFD209635BC0040E6F6 /* SwiftReorderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftReorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		41FDD002209635BC0040E6F6 /* SwiftReorderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftReorderTests.swift; sourceTree = "<group>"; };
+		41FDD004209635BC0040E6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41FDD00E209637D00040E6F6 /* UITableView+Reorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reorder.swift"; sourceTree = "<group>"; };
+		41FDD00F209637D00040E6F6 /* ReorderController+SnapshotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReorderController+SnapshotView.swift"; sourceTree = "<group>"; };
+		41FDD010209637D00040E6F6 /* ReorderController+AutoScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReorderController+AutoScroll.swift"; sourceTree = "<group>"; };
+		41FDD011209637D00040E6F6 /* ReorderController+GestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReorderController+GestureRecognizer.swift"; sourceTree = "<group>"; };
+		41FDD012209637D00040E6F6 /* ReorderController+DestinationRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReorderController+DestinationRow.swift"; sourceTree = "<group>"; };
+		41FDD013209637D00040E6F6 /* ReorderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReorderController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		660256901CE6A5170029CB5F /* Frameworks */ = {
+		41FDCFF0209635BC0040E6F6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41FDCFFA209635BC0040E6F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41FDCFFE209635BC0040E6F6 /* SwiftReorder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6602568A1CE6A5170029CB5F = {
+		41FDCFEA209635BC0040E6F6 = {
 			isa = PBXGroup;
 			children = (
-				660256A81CE6A72F0029CB5F /* Source */,
-				660256951CE6A5170029CB5F /* Example */,
-				660256941CE6A5170029CB5F /* Products */,
+				41FDCFF6209635BC0040E6F6 /* SwiftReorder */,
+				41FDD001209635BC0040E6F6 /* SwiftReorderTests */,
+				41FDCFF5209635BC0040E6F6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		660256941CE6A5170029CB5F /* Products */ = {
+		41FDCFF5209635BC0040E6F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				660256931CE6A5170029CB5F /* SwiftReorder.app */,
+				41FDCFF4209635BC0040E6F6 /* SwiftReorder.framework */,
+				41FDCFFD209635BC0040E6F6 /* SwiftReorderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		660256951CE6A5170029CB5F /* Example */ = {
+		41FDCFF6209635BC0040E6F6 /* SwiftReorder */ = {
 			isa = PBXGroup;
 			children = (
-				66FC50E81D5EE49D00CFCCCE /* AppDelegate.swift */,
-				66FC50F01D5EE49D00CFCCCE /* RootViewController.swift */,
-				66FC50E91D5EE49D00CFCCCE /* BasicViewController.swift */,
-				66FC50EC1D5EE49D00CFCCCE /* GroupedViewController.swift */,
-				66FC50EB1D5EE49D00CFCCCE /* EffectsViewController.swift */,
-				66FC50EE1D5EE49D00CFCCCE /* LongListViewController.swift */,
-				66FC50EF1D5EE49D00CFCCCE /* NonMovableViewController.swift */,
-				66FC50ED1D5EE49D00CFCCCE /* Info.plist */,
+				41FDD013209637D00040E6F6 /* ReorderController.swift */,
+				41FDD010209637D00040E6F6 /* ReorderController+AutoScroll.swift */,
+				41FDD012209637D00040E6F6 /* ReorderController+DestinationRow.swift */,
+				41FDD011209637D00040E6F6 /* ReorderController+GestureRecognizer.swift */,
+				41FDD00F209637D00040E6F6 /* ReorderController+SnapshotView.swift */,
+				41FDD00E209637D00040E6F6 /* UITableView+Reorder.swift */,
+				41FDCFF7209635BC0040E6F6 /* SwiftReorder.h */,
+				41FDCFF8209635BC0040E6F6 /* Info.plist */,
 			);
-			path = Example;
+			path = SwiftReorder;
 			sourceTree = "<group>";
 		};
-		660256A81CE6A72F0029CB5F /* Source */ = {
+		41FDD001209635BC0040E6F6 /* SwiftReorderTests */ = {
 			isa = PBXGroup;
 			children = (
-				66FC50FA1D5EE4CA00CFCCCE /* UITableView+Reorder.swift */,
-				66FC50FC1D5EE4D600CFCCCE /* ReorderController.swift */,
-				66DF25131D8080A000C19289 /* ReorderController+SnapshotView.swift */,
-				66DF25111D8080A000C19289 /* ReorderController+DestinationRow.swift */,
-				66DF25101D8080A000C19289 /* ReorderController+AutoScroll.swift */,
-				66DF25121D8080A000C19289 /* ReorderController+GestureRecognizer.swift */,
+				41FDD002209635BC0040E6F6 /* SwiftReorderTests.swift */,
+				41FDD004209635BC0040E6F6 /* Info.plist */,
 			);
-			name = Source;
+			path = SwiftReorderTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		41FDCFF1209635BC0040E6F6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41FDD005209635BC0040E6F6 /* SwiftReorder.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		660256921CE6A5170029CB5F /* SwiftReorder */ = {
+		41FDCFF3209635BC0040E6F6 /* SwiftReorder */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 660256A51CE6A5170029CB5F /* Build configuration list for PBXNativeTarget "SwiftReorder" */;
+			buildConfigurationList = 41FDD008209635BC0040E6F6 /* Build configuration list for PBXNativeTarget "SwiftReorder" */;
 			buildPhases = (
-				6602568F1CE6A5170029CB5F /* Sources */,
-				660256901CE6A5170029CB5F /* Frameworks */,
-				660256911CE6A5170029CB5F /* Resources */,
+				41FDCFEF209635BC0040E6F6 /* Sources */,
+				41FDCFF0209635BC0040E6F6 /* Frameworks */,
+				41FDCFF1209635BC0040E6F6 /* Headers */,
+				41FDCFF2209635BC0040E6F6 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -113,45 +133,73 @@
 			);
 			name = SwiftReorder;
 			productName = SwiftReorder;
-			productReference = 660256931CE6A5170029CB5F /* SwiftReorder.app */;
-			productType = "com.apple.product-type.application";
+			productReference = 41FDCFF4209635BC0040E6F6 /* SwiftReorder.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		41FDCFFC209635BC0040E6F6 /* SwiftReorderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41FDD00B209635BC0040E6F6 /* Build configuration list for PBXNativeTarget "SwiftReorderTests" */;
+			buildPhases = (
+				41FDCFF9209635BC0040E6F6 /* Sources */,
+				41FDCFFA209635BC0040E6F6 /* Frameworks */,
+				41FDCFFB209635BC0040E6F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41FDD000209635BC0040E6F6 /* PBXTargetDependency */,
+			);
+			name = SwiftReorderTests;
+			productName = SwiftReorderTests;
+			productReference = 41FDCFFD209635BC0040E6F6 /* SwiftReorderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6602568B1CE6A5170029CB5F /* Project object */ = {
+		41FDCFEB209635BC0040E6F6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = "Adam Shin";
+				ORGANIZATIONNAME = "Tortuga Power";
 				TargetAttributes = {
-					660256921CE6A5170029CB5F = {
-						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0920;
+					41FDCFF3209635BC0040E6F6 = {
+						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
+					};
+					41FDCFFC209635BC0040E6F6 = {
+						CreatedOnToolsVersion = 9.3;
 					};
 				};
 			};
-			buildConfigurationList = 6602568E1CE6A5170029CB5F /* Build configuration list for PBXProject "SwiftReorder" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = 41FDCFEE209635BC0040E6F6 /* Build configuration list for PBXProject "SwiftReorder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
-			mainGroup = 6602568A1CE6A5170029CB5F;
-			productRefGroup = 660256941CE6A5170029CB5F /* Products */;
+			mainGroup = 41FDCFEA209635BC0040E6F6;
+			productRefGroup = 41FDCFF5209635BC0040E6F6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				660256921CE6A5170029CB5F /* SwiftReorder */,
+				41FDCFF3209635BC0040E6F6 /* SwiftReorder */,
+				41FDCFFC209635BC0040E6F6 /* SwiftReorderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		660256911CE6A5170029CB5F /* Resources */ = {
+		41FDCFF2209635BC0040E6F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41FDCFFB209635BC0040E6F6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -161,44 +209,56 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6602568F1CE6A5170029CB5F /* Sources */ = {
+		41FDCFEF209635BC0040E6F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66FC50F91D5EE49D00CFCCCE /* RootViewController.swift in Sources */,
-				66DF25161D8080A000C19289 /* ReorderController+GestureRecognizer.swift in Sources */,
-				66FC50FD1D5EE4D600CFCCCE /* ReorderController.swift in Sources */,
-				66DF25141D8080A000C19289 /* ReorderController+AutoScroll.swift in Sources */,
-				66FC50F81D5EE49D00CFCCCE /* NonMovableViewController.swift in Sources */,
-				66DF25151D8080A000C19289 /* ReorderController+DestinationRow.swift in Sources */,
-				66FC50F11D5EE49D00CFCCCE /* AppDelegate.swift in Sources */,
-				66FC50F71D5EE49D00CFCCCE /* LongListViewController.swift in Sources */,
-				66FC50FB1D5EE4CA00CFCCCE /* UITableView+Reorder.swift in Sources */,
-				66DF25171D8080A000C19289 /* ReorderController+SnapshotView.swift in Sources */,
-				66FC50F51D5EE49D00CFCCCE /* GroupedViewController.swift in Sources */,
-				66FC50F21D5EE49D00CFCCCE /* BasicViewController.swift in Sources */,
-				66FC50F41D5EE49D00CFCCCE /* EffectsViewController.swift in Sources */,
+				41FDD016209637D00040E6F6 /* ReorderController+AutoScroll.swift in Sources */,
+				41FDD017209637D00040E6F6 /* ReorderController+GestureRecognizer.swift in Sources */,
+				41FDD015209637D00040E6F6 /* ReorderController+SnapshotView.swift in Sources */,
+				41FDD019209637D00040E6F6 /* ReorderController.swift in Sources */,
+				41FDD014209637D00040E6F6 /* UITableView+Reorder.swift in Sources */,
+				41FDD018209637D00040E6F6 /* ReorderController+DestinationRow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41FDCFF9209635BC0040E6F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41FDD003209635BC0040E6F6 /* SwiftReorderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		41FDD000209635BC0040E6F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41FDCFF3209635BC0040E6F6 /* SwiftReorder */;
+			targetProxy = 41FDCFFF209635BC0040E6F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		660256A31CE6A5170029CB5F /* Debug */ = {
+		41FDD006209635BC0040E6F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -210,14 +270,16 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -231,30 +293,35 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		660256A41CE6A5170029CB5F /* Release */ = {
+		41FDD007209635BC0040E6F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -266,14 +333,16 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -281,61 +350,139 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		660256A61CE6A5170029CB5F /* Debug */ = {
+		41FDD009209635BC0040E6F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = Example/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = adamshin.SwiftReorder;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S7TJSJXWUZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftReorder/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tortugapower.SwiftReorder;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		660256A71CE6A5170029CB5F /* Release */ = {
+		41FDD00A209635BC0040E6F6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = Example/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = adamshin.SwiftReorder;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = S7TJSJXWUZ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = SwiftReorder/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tortugapower.SwiftReorder;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		41FDD00C209635BC0040E6F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S7TJSJXWUZ;
+				INFOPLIST_FILE = SwiftReorderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tortugapower.SwiftReorderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		41FDD00D209635BC0040E6F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S7TJSJXWUZ;
+				INFOPLIST_FILE = SwiftReorderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tortugapower.SwiftReorderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6602568E1CE6A5170029CB5F /* Build configuration list for PBXProject "SwiftReorder" */ = {
+		41FDCFEE209635BC0040E6F6 /* Build configuration list for PBXProject "SwiftReorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				660256A31CE6A5170029CB5F /* Debug */,
-				660256A41CE6A5170029CB5F /* Release */,
+				41FDD006209635BC0040E6F6 /* Debug */,
+				41FDD007209635BC0040E6F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		660256A51CE6A5170029CB5F /* Build configuration list for PBXNativeTarget "SwiftReorder" */ = {
+		41FDD008209635BC0040E6F6 /* Build configuration list for PBXNativeTarget "SwiftReorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				660256A61CE6A5170029CB5F /* Debug */,
-				660256A71CE6A5170029CB5F /* Release */,
+				41FDD009209635BC0040E6F6 /* Debug */,
+				41FDD00A209635BC0040E6F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41FDD00B209635BC0040E6F6 /* Build configuration list for PBXNativeTarget "SwiftReorderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41FDD00C209635BC0040E6F6 /* Debug */,
+				41FDD00D209635BC0040E6F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6602568B1CE6A5170029CB5F /* Project object */;
+	rootObject = 41FDCFEB209635BC0040E6F6 /* Project object */;
 }
