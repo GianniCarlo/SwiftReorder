@@ -62,8 +62,18 @@ public protocol TableViewReorderDelegate: class {
      - Parameter tableView: The table view requesting this information.
      - Parameter sourceIndexPath: The original index path of the row to be moved.
      - Parameter proposedDestinationIndexPath: The potential index path of the row's new location.
+     - Parameter snapshot: Reference to the snapshot of the cell that is being dragged.
      */
-    func tableView(_ tableView: UITableView, targetIndexPathForReorderFromRowAt sourceIndexPath: IndexPath, to proposedDestinationIndexPath: IndexPath) -> IndexPath
+    func tableView(_ tableView: UITableView, targetIndexPathForReorderFromRowAt sourceIndexPath: IndexPath, to proposedDestinationIndexPath: IndexPath, snapshot: UIView?) -> IndexPath
+    
+    /**
+     Tells the delegate that a new row is under the cell being dragged.
+     - Parameter tableView: The table view providing this information.
+     - Parameter sourceIndexPath: The original index path of the row to be moved.
+     - Parameter overIndexPath: The index path of the cell underneath the cell being reordered.
+     - Parameter snapshot: Reference to the snapshot of the cell that is being dragged.
+     */
+    func tableView(_ tableView: UITableView, sourceIndexPath: IndexPath, overIndexPath: IndexPath, snapshot:UIView)
 
     /**
      Tells the delegate that the user has begun reordering a row.
@@ -77,8 +87,9 @@ public protocol TableViewReorderDelegate: class {
      - Parameter tableView: The table view providing this information.
      - Parameter initialSourceIndexPath: The initial index path of the selected row, before reordering began.
      - Parameter finalDestinationIndexPath: The final index path of the selected row.
+     - Parameter overIndexPath: The index path of the row unto which the dragged row was dropped.
      */
-    func tableViewDidFinishReordering(_ tableView: UITableView, from initialSourceIndexPath: IndexPath, to finalDestinationIndexPath: IndexPath)
+    func tableViewDidFinishReordering(_ tableView: UITableView, from initialSourceIndexPath: IndexPath, to finalDestinationIndexPath: IndexPath, dropped overIndexPath: IndexPath?)
     
 }
 
@@ -88,16 +99,18 @@ public extension TableViewReorderDelegate {
         return true
     }
     
-    func tableView(_ tableView: UITableView, targetIndexPathForReorderFromRowAt sourceIndexPath: IndexPath, to proposedDestinationIndexPath: IndexPath) -> IndexPath {
+    func tableView(_ tableView: UITableView, targetIndexPathForReorderFromRowAt sourceIndexPath: IndexPath, to proposedDestinationIndexPath: IndexPath, snapshot: UIView?) -> IndexPath {
         return proposedDestinationIndexPath
+    }
+    
+    func tableView(_ tableView: UITableView, sourceIndexPath: IndexPath, overIndexPath: IndexPath, snapshot: UIView) {
     }
 
     func tableViewDidBeginReordering(_ tableView: UITableView, at indexPath: IndexPath) {
     }
     
-    func tableViewDidFinishReordering(_ tableView: UITableView, from initialSourceIndexPath: IndexPath, to finalDestinationIndexPath:IndexPath) {
+    func tableViewDidFinishReordering(_ tableView: UITableView, from initialSourceIndexPath: IndexPath, to finalDestinationIndexPath:IndexPath, dropped overIndexPath: IndexPath?) {
     }
-    
 }
 
 // MARK: - ReorderController
@@ -116,6 +129,8 @@ public class ReorderController: NSObject {
     public var isEnabled: Bool = true {
         didSet { reorderGestureRecognizer.isEnabled = isEnabled }
     }
+    
+    public var overlapThreshold: CGFloat = 80
     
     public var longPressDuration: TimeInterval = 0.3 {
         didSet {
@@ -180,6 +195,7 @@ public class ReorderController: NSObject {
     struct ReorderContext {
         var sourceRow: IndexPath
         var destinationRow: IndexPath
+        var overRow: IndexPath
         var snapshotOffset: CGFloat
         var touchPosition: CGPoint
     }
@@ -241,6 +257,7 @@ public class ReorderController: NSObject {
         let context = ReorderContext(
             sourceRow: sourceRow,
             destinationRow: sourceRow,
+            overRow: sourceRow,
             snapshotOffset: snapshotOffset,
             touchPosition: touchPosition
         )
@@ -295,7 +312,11 @@ public class ReorderController: NSObject {
         animateSnapshotViewOut()
         clearAutoScrollDisplayLink()
         
-        delegate?.tableViewDidFinishReordering(tableView, from: context.sourceRow, to: context.destinationRow)
+        let overIndexPath = context.overRow == context.destinationRow
+            ? nil
+            : context.overRow
+        
+        delegate?.tableViewDidFinishReordering(tableView, from: context.sourceRow, to: context.destinationRow, dropped: overIndexPath)
     }
     
     // MARK: - Spacer cell

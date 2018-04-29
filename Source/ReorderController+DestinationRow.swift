@@ -36,7 +36,7 @@ extension ReorderController {
         guard case .reordering(let context) = reorderState,
             let tableView = tableView,
             let proposedNewDestinationRow = proposedNewDestinationRow(),
-            let newDestinationRow = delegate?.tableView(tableView, targetIndexPathForReorderFromRowAt: context.destinationRow, to: proposedNewDestinationRow),
+            let newDestinationRow = delegate?.tableView(tableView, targetIndexPathForReorderFromRowAt: context.destinationRow, to: proposedNewDestinationRow, snapshot: snapshotView),
             newDestinationRow != context.destinationRow
         else { return }
         
@@ -62,7 +62,7 @@ extension ReorderController {
         let snapshotFrameInSuperview = CGRect(center: snapshotView.center, size: snapshotView.bounds.size)
         let snapshotFrame = superview.convert(snapshotFrameInSuperview, to: tableView)
         
-        let visibleCells = tableView.visibleCells.filter {
+        let availablePaths = tableView.visibleCells.compactMap { (cell) -> (path:IndexPath, overlapPercent: CGFloat)? in
             // Workaround for an iOS 11 bug.
             
             // When adding a row using UITableView.insertRows(...), if the new
@@ -70,55 +70,43 @@ extension ReorderController {
             // bounds, and the new row is not the first row in the table view,
             // it's inserted without animation.
             
-            let cellOverlapsTopBounds = $0.frame.minY < tableView.bounds.minY + 5
-            let cellIsFirstCell = tableView.indexPath(for: $0) == IndexPath(row: 0, section: 0)
+            let cellOverlapsTopBounds = cell.frame.minY < tableView.bounds.minY + 5
+            let indexPath = tableView.indexPath(for: cell) ?? IndexPath(row: 0, section: 0)
             
-            return !cellOverlapsTopBounds || cellIsFirstCell
-        }
-        
-        let rowSnapDistances = visibleCells.map { cell -> (path: IndexPath, distance: CGFloat) in
-            let path = tableView.indexPath(for: cell) ?? IndexPath(row: 0, section: 0)
-
-            if context.destinationRow.compare(path) == .orderedAscending {
-                return (path, abs(snapshotFrame.maxY - cell.frame.maxY))
-            } else {
-                return (path, abs(snapshotFrame.minY - cell.frame.minY))
-            }
-        }
-        
-        let sectionIndexes = 0..<tableView.numberOfSections
-        let sectionSnapDistances = sectionIndexes.compactMap { section -> (path: IndexPath, distance: CGFloat)? in
-            let rowsInSection = tableView.numberOfRows(inSection: section)
+            let overlapPercent = rectIntersectionInPerc(r1: snapshotFrame, r2: cell.frame)
             
-            if section > context.destinationRow.section {
-                let rect: CGRect
-                if rowsInSection == 0 {
-                    rect = rectForEmptySection(section)
-                } else {
-                    rect = tableView.rectForRow(at: IndexPath(row: 0, section: section))
-                }
-                
-                let path = IndexPath(row: 0, section: section)
-                return (path, abs(snapshotFrame.maxY - rect.minY))
-                
-            } else if section < context.destinationRow.section {
-                let rect: CGRect
-                if rowsInSection == 0 {
-                    rect = rectForEmptySection(section)
-                } else {
-                    rect = tableView.rectForRow(at: IndexPath(row: rowsInSection - 1, section: section))
-                }
-                
-                let path = IndexPath(row: rowsInSection, section: section)
-                return (path, abs(snapshotFrame.minY - rect.maxY))
-                
-            } else {
+            guard overlapPercent > 0 else {
                 return nil
             }
+            
+            let cellIsFirstCell = indexPath == IndexPath(row: 0, section: 0)
+            
+            guard (!cellOverlapsTopBounds || cellIsFirstCell) else {
+                return nil
+            }
+            
+            return (indexPath, overlapPercent)
         }
         
-        let snapDistances = rowSnapDistances + sectionSnapDistances
-        return snapDistances.min(by: { $0.distance < $1.distance })?.path
+        guard !availablePaths.contains(where: { (path, overlapPercent) -> Bool in
+            return path == context.destinationRow
+        }), let selectedPath = availablePaths.max(by: { $0.overlapPercent < $1.overlapPercent }) else {
+            return nil
+        }
+        
+        //check
+        if context.overRow != selectedPath.path {
+            var newContext = context
+            newContext.overRow = selectedPath.path
+            reorderState = .reordering(context: newContext)
+            delegate?.tableView(tableView, sourceIndexPath: newContext.sourceRow, overIndexPath: newContext.overRow, snapshot: snapshotView)
+        }
+        
+        if selectedPath.overlapPercent > overlapThreshold {
+            return nil
+        }
+        
+        return selectedPath.path
     }
     
     func rectForEmptySection(_ section: Int) -> CGRect {
@@ -128,4 +116,17 @@ extension ReorderController {
         return UIEdgeInsetsInsetRect(sectionRect, UIEdgeInsets(top: sectionRect.height, left: 0, bottom: 0, right: 0))
     }
     
+    //Width and Height of both rects may be different
+    func rectIntersectionInPerc(r1:CGRect, r2:CGRect) -> CGFloat {
+        if (r1.intersects(r2)) {
+            let interRect:CGRect = r1.intersection(r2);
+            
+            let interRectArea = interRect.width * interRect.height
+            let r1Area = r1.width * r1.height
+            let r2Area = r2.width * r2.height
+            
+            return (interRectArea / ((r1Area + r2Area)/2.0) * 100.0)
+        }
+        return 0;
+    }
 }
