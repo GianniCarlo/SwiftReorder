@@ -31,7 +31,7 @@
 /* Begin PBXFileReference section */
 		41FDCFF4209635BC0040E6F6 /* SwiftReorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftReorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FDCFF7209635BC0040E6F6 /* SwiftReorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftReorder.h; sourceTree = "<group>"; };
-		41FDCFF8209635BC0040E6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41FDCFF8209635BC0040E6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
 		41FDCFFD209635BC0040E6F6 /* SwiftReorderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftReorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FDD002209635BC0040E6F6 /* SwiftReorderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftReorderTests.swift; sourceTree = "<group>"; };
 		41FDD004209635BC0040E6F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,7 +92,8 @@
 				41FDCFF7209635BC0040E6F6 /* SwiftReorder.h */,
 				41FDCFF8209635BC0040E6F6 /* Info.plist */,
 			);
-			path = SwiftReorder;
+			name = SwiftReorder;
+			path = Sources/SwiftReorder;
 			sourceTree = "<group>";
 		};
 		41FDD001209635BC0040E6F6 /* SwiftReorderTests */ = {
@@ -101,7 +102,8 @@
 				41FDD002209635BC0040E6F6 /* SwiftReorderTests.swift */,
 				41FDD004209635BC0040E6F6 /* Info.plist */,
 			);
-			path = SwiftReorderTests;
+			name = SwiftReorderTests;
+			path = Tests/SwiftReorderTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,7 +374,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftReorder/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -400,7 +402,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = SwiftReorder/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
