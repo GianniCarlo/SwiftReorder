@@ -38,7 +38,9 @@ extension ReorderController {
             
         case .ended, .cancelled, .failed, .possible:
             endReorder()
-        }
+		@unknown default:
+			endReorder()
+		}
     }
     
 }
